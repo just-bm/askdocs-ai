@@ -2,7 +2,8 @@
 
 **AskDocs AI** is an AI-powered chatbot that leverages **RAG (Retrieval-Augmented Generation)** to answer your questions based on the content of uploaded PDFs.
 
-
+<img src="./images/demo_1.png" alt="Demo 1">
+<img src="./images/demo_2.png" alt="Demo 2">
 
 ## Tech Stack
 
@@ -10,7 +11,7 @@
 - Langchain
 - ChromaDB
 - Streamlit
-- GROQ cloud 
+- Groq cloud 
 
 ## Setup Instruction
 
