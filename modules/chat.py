@@ -15,7 +15,7 @@ def handle_user_input(chain):
     st.session_state.messages.append({"role": "user", "content": user_input})
 
     try:
-        result = chain({"query": user_input})
+        result = chain.invoke({"query": user_input})
         response = result["result"]
         st.chat_message("assistant").markdown(response)
         st.session_state.messages.append({"role": "assistant", "content": response})

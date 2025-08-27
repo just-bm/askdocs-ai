@@ -3,11 +3,8 @@ from langchain_community.vectorstores import Chroma
 
 def inspect_chroma(vectorstore):
     st.sidebar.markdown("🧪 **ChromaDB Inspector**")
-
-    # Input for number of results (k)
     k = st.sidebar.number_input("📄 Number of top results to fetch", min_value=1, max_value=10, value=3, step=1)
 
-    # Show basic info
     try:
         doc_count = vectorstore._collection.count()
         st.sidebar.success(f"🔎 {doc_count} documents stored in ChromaDB.")
@@ -15,7 +12,6 @@ def inspect_chroma(vectorstore):
         st.sidebar.error("Could not fetch document count.")
         st.sidebar.code(str(e))
 
-    # Search inside the vectorstore
     query = st.sidebar.text_input("🔍 Test a query against ChromaDB")
 
     if query:

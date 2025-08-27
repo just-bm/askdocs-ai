@@ -5,7 +5,7 @@ def upload_pdfs():
     with st.sidebar:
         st.header("📁 Upload PDFs")
         uploaded_files = st.file_uploader("Choose PDF files", type="pdf", accept_multiple_files=True)
-        submit = st.button(" Submit to DB")
+        submit = st.button("Submit to DB")
     return uploaded_files, submit
 
 def save_uploaded_files(uploaded_files):
